@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/49f73a6ecc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+              <img src="logo.png" class="logo">
+
+              <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+              </ul>
+              <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> UI/UX Designer </p>
+                <h1>Hi, I'm <span>Rohith</span><br> Welcome to my Portfolio</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about-me">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="aboutphoto.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>
+                        Hi, I'm Rohith – a passionate web developer and student with a strong interest in creating clean, responsive, and user-friendly websites. I enjoy turning ideas into reality through code and constantly strive to learn new technologies to enhance my skills.
+
+                        Currently, I'm focusing on front-end development with HTML, CSS, and JavaScript, and I’m exploring tools like React to build dynamic and interactive web applications.
+                        
+                        As a student, I understand the value of balancing academic goals with practical learning. I’m actively working on building my portfolio through freelance projects and personal challenges, and I’m always open to exciting collaborations.
+                        
+                        When I’m not coding, I enjoy learning about UI/UX design and staying updated with the latest tech trends. My goal is to grow as a full-stack developer and contribute meaningfully to impactful projects.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br> Web interfaces </li>
+                            <li><span>Web development</span><br> Designing Web applications </li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2025</span><br>build a website for the client in 2025 </li>
+                            <li><span>2024-hackathon</span><br>build a website of protien in-take in 2024</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024-2025</span><br>Completing web development bootstrap course by Udemy</li>
+                            <li><span>2025-current</span><br>completing JavaScript course by Udemy </li>
+                            <li><span>2023-2027</span><br>completed Btech from Aurora institute</li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="service">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="service-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web design</h2>
+                    <p>I create visually appealing and user-friendly websites that reflect your brand’s identity. Whether it's a personal blog or a business site, I focus on clean layouts, responsive design, and smooth navigation to ensure a great user experience on all devices.    </p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX</h2>
+                    <p>I design intuitive and engaging user interfaces that enhance the overall user experience. By focusing on usability, accessibility, and modern design trends, I ensure your digital product not only looks great but also feels easy and enjoyable to use.</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-rocket"></i>
+                    <h2>Performance Optimization</h2>
+                    <p>I enhance your website’s speed and performance by minimizing load times, optimizing assets, and improving overall responsiveness. A faster site means better user experience, higher engagement, and improved SEO rankings. </p>
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-------------------portfolio----------------------->
+
+     <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list">
+            <div class="work">
+                <img src="work1.png">
+                <div class="layer">
+                    <h3>Nearby Driver Service</h3>
+                    <p>I designed and developed a fully responsive website for a local driver service in Hyderabad. The site features a clean layout, smooth navigation, and mobile-friendly design with integrated WhatsApp and call-to-action buttons for easy driver booking.</p>
+                    <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+            </div>
+            <div class="work">
+                <img src="work2.png">
+                <div class="layer">
+                    <h3>Driver Rates UI Section</h3>
+                    <p>A responsive pricing section displaying driver packages by hours. Each card includes a booking button that triggers a confirmation prompt, allowing users to quickly select and request a package. Clean design and mobile-friendly layout.</p>
+                    <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+
+                </div>
+
+            </div>
+            <div class="work">
+                <img src="work3.png">
+                <div class="layer">
+                    <h3>BookMate UI</h3>
+                    <p>
+                        A user-friendly booking interface allowing visitors to request a driver within minutes. Includes an interactive form, urgent call support, WhatsApp chat, and email integration—designed for quick access and a smooth booking experience.
+                    </p>
+                    <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+            </div>
+        </div>
+        <a href="https://nearbydriverservice.netlify.app/" class="btn">See more</a>
+        </div>
+     </div>
+     <!-- ------------------------------------contact------------------------------- -->
+      <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>adaparohith29@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7731983447</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1EkQB8eD2y/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://x.com/adapa_rohith?t=MAB6hMZDpJahNKiRRwqeBg&s=09"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/rohith_12_05?igsh=MXVwNTJuemNuNzUyYw=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/adapa-rohith-4641842a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+    
+</body>
+</html>
