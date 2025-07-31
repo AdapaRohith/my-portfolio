@@ -5,13 +5,13 @@
     box-sizing: border-box;
 }
 body{
-    background: #080808;
+    background: #0A0C10;
     color: #fff;
 }
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(main.png);
+    background-image: url(rohith.png);
     background-size: cover;
     background-position: center;
 }
