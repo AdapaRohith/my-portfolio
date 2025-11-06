@@ -362,5 +362,9 @@ nav .fa-solid{
     .contact-left,.contact-right{
         flex-basis: 100%;
     }
+    .work-list{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
