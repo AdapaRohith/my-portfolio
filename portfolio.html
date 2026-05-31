@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Rohith's Work</title>
+    <meta name="description" content="All projects built by Rohith — a UI/UX Designer and Frontend Developer from Hyderabad.">
+    <link href="style.css" rel="stylesheet">
+    <link href="portfolio.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/49f73a6ecc.js" crossorigin="anonymous"></script>
+</head>
+<body class="portfolio-page">
+
+    <!-- ===== NAV ===== -->
+    <nav class="port-nav">
+        <div class="container port-nav-inner">
+            <a href="index.html" class="port-nav-logo">
+                <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <ul id="sidemenu">
+                <li><a href="index.html#header">Home</a></li>
+                <li><a href="index.html#about-me">About</a></li>
+                <li><a href="index.html#service">Services</a></li>
+                <li><a href="portfolio.html" class="active-nav">Portfolio</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <div class="port-hero">
+        <div class="port-hero-glow"></div>
+        <div class="container">
+            <div class="port-hero-content">
+                <h1>Projects</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ALL PROJECTS ===== -->
+    <div class="port-page-section">
+        <div class="container">
+            <div class="proj-list">
+
+                <!-- =====================================================
+                     PROJECT 1 — Infinova Skill Verifier
+                     Photo: infinova.png | Layout: image LEFT, summary RIGHT
+                     ===================================================== -->
+                <div class="proj-item proj-anim">
+                    <!-- Image side -->
+                    <div class="proj-image-wrap">
+                        <div class="proj-img-frame">
+                            <img src="infinova.png" alt="Infinova Skill Verifier website screenshot" class="proj-screenshot">
+                        </div>
+                        <div class="proj-badge" style="background:linear-gradient(90deg,#06b6d4,#0e7490);">Infinova</div>
+                    </div>
+
+                    <!-- Summary side -->
+                    <div class="proj-summary">
+                        <div class="proj-org-tag" style="background:rgba(6,182,212,0.12);border-color:rgba(6,182,212,0.35);color:#22d3ee;">
+                            <i class="fa-solid fa-trophy"></i> Hackathon Project
+                        </div>
+                        <h2>Infinova Skill Verifier</h2>
+                        <p>An AI-powered tool that <strong>detects whether a candidate is misrepresenting their skills</strong> by cross-referencing their GitHub repositories and resume. Built using <strong>n8n automation workflows</strong> and <strong>blockchain</strong> for tamper-proof verification records.</p>
+                        <ul class="proj-skills">
+                            <li><i class="fa-solid fa-check"></i> GitHub Repo Analysis</li>
+                            <li><i class="fa-solid fa-check"></i> Resume Skills Extraction</li>
+                            <li><i class="fa-solid fa-check"></i> n8n Workflow Automation</li>
+                            <li><i class="fa-solid fa-check"></i> Blockchain Verification</li>
+                        </ul>
+                        <div class="proj-links">
+                            <a href="https://adaparohith.github.io/Infinova-Hackathon/" target="_blank" rel="noopener" class="proj-link-btn proj-link-primary" style="background:rgba(6,182,212,0.18);border-color:rgba(6,182,212,0.5);color:#22d3ee;">
+                                <i class="fa-solid fa-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/AdapaRohith/Infinova-Hackathon" target="_blank" rel="noopener" class="proj-link-btn proj-link-secondary" style="border-color:rgba(6,182,212,0.3);color:#67e8f9;">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                        </div>
+                        <span class="proj-year">2025</span>
+                    </div>
+                </div>
+
+                <!-- =====================================================
+                     PROJECT 2 — Kshetra Interiors
+                     Photo: kshetra.png | Layout: image RIGHT, summary LEFT
+                     ===================================================== -->
+                <div class="proj-item proj-anim">
+                    <!-- Image side -->
+                    <div class="proj-image-wrap">
+                        <div class="proj-img-frame">
+                            <img src="kshetra.png" alt="Kshetra Interiors website screenshot" class="proj-screenshot">
+                        </div>
+                        <div class="proj-badge" style="background:linear-gradient(90deg,#d4a017,#a07010);">Kshetra</div>
+                    </div>
+
+                    <!-- Summary side -->
+                    <div class="proj-summary">
+                        <div class="proj-org-tag" style="background:rgba(212,160,23,0.12);border-color:rgba(212,160,23,0.35);color:#d4a017;">
+                            <i class="fa-solid fa-building"></i> Client Project
+                        </div>
+                        <h2>Kshetra Interiors</h2>
+                        <p>A premium <strong>business portfolio website</strong> for an interior design firm — crafted to showcase their design philosophy, project gallery, and services. The site reflects elegance and sophistication to attract high-end clients looking for bespoke interior solutions.</p>
+                        <ul class="proj-skills">
+                            <li><i class="fa-solid fa-check"></i> Business Portfolio Design</li>
+                            <li><i class="fa-solid fa-check"></i> Interior Design Showcase</li>
+                            <li><i class="fa-solid fa-check"></i> Responsive &amp; Modern UI</li>
+                            <li><i class="fa-solid fa-check"></i> Client Lead Generation</li>
+                        </ul>
+                        <div class="proj-links">
+                            <a href="https://kshetra.avlokai.com/" target="_blank" rel="noopener" class="proj-link-btn proj-link-primary" style="background:rgba(212,160,23,0.18);border-color:rgba(212,160,23,0.5);color:#e8c04a;">
+                                <i class="fa-solid fa-up-right-from-square"></i> Live Site
+                            </a>
+                            <a href="https://github.com/AdapaRohith/Kshetra-Interiors" target="_blank" rel="noopener" class="proj-link-btn proj-link-secondary" style="border-color:rgba(212,160,23,0.35);color:#e8c04a;">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                        </div>
+                        <span class="proj-year">2025</span>
+                    </div>
+                </div>
+
+                <!-- =====================================================
+                     PROJECT 3 — StudyBuddy
+                     Photo: work5.png | Layout: image LEFT, summary RIGHT
+                     ===================================================== -->
+                <div class="proj-item proj-anim">
+                    <!-- Image side -->
+                    <div class="proj-image-wrap">
+                        <div class="proj-img-frame">
+                            <img src="work5.png" alt="StudyBuddy project screenshot" class="proj-screenshot">
+                        </div>
+                        <div class="proj-badge" style="background:linear-gradient(90deg,#6366f1,#4f46e5);">StudyBuddy</div>
+                    </div>
+
+                    <!-- Summary side -->
+                    <div class="proj-summary">
+                        <div class="proj-org-tag" style="background:rgba(99,102,241,0.12);border-color:rgba(99,102,241,0.35);color:#818cf8;">
+                            <i class="fa-solid fa-graduation-cap"></i> Hackathon Project
+                        </div>
+                        <h2>StudyBuddy</h2>
+                        <p>A <strong>smart study companion web app</strong> built to help students connect, collaborate, and manage their academic journey effectively. Features include study groups, shared scheduling, and collaborative learning resources.</p>
+                        <ul class="proj-skills">
+                            <li><i class="fa-solid fa-check"></i> Study Groups &amp; Collaboration</li>
+                            <li><i class="fa-solid fa-check"></i> Daily Schedule Management</li>
+                            <li><i class="fa-solid fa-check"></i> Student Resource Sharing</li>
+                            <li><i class="fa-solid fa-check"></i> Responsive Multi-Page App</li>
+                        </ul>
+                        <div class="proj-links">
+                            <a href="https://adaparohith.github.io/StuddyBuddy/index.html" target="_blank" rel="noopener" class="proj-link-btn proj-link-primary" style="background:rgba(99,102,241,0.18);border-color:rgba(99,102,241,0.5);color:#818cf8;">
+                                <i class="fa-solid fa-up-right-from-square"></i> Live Site
+                            </a>
+                            <a href="https://github.com/AdapaRohith/StuddyBuddy" target="_blank" rel="noopener" class="proj-link-btn proj-link-secondary" style="border-color:rgba(99,102,241,0.35);color:#818cf8;">
+                                <i class="fa-brands fa-github"></i> Source Code
+                            </a>
+                            <a href="https://adaparohith.github.io/StuddyBuddy/html/groups.html" target="_blank" rel="noopener" class="proj-link-btn proj-link-secondary" style="border-color:rgba(99,102,241,0.35);color:#818cf8;">
+                                <i class="fa-solid fa-users"></i> Groups
+                            </a>
+                            <a href="https://adaparohith.github.io/StuddyBuddy/html/schedule.html" target="_blank" rel="noopener" class="proj-link-btn proj-link-secondary" style="border-color:rgba(99,102,241,0.35);color:#818cf8;">
+                                <i class="fa-solid fa-calendar"></i> Schedule
+                            </a>
+                        </div>
+                        <span class="proj-year">2025</span>
+                    </div>
+                </div>
+
+                <!-- =====================================================
+                     PROJECT 4 — Nearby Driver Service
+                     Photo: work1.png | Layout: image RIGHT, summary LEFT
+                     ===================================================== -->
+                <div class="proj-item proj-anim">
+                    <!-- Image side -->
+                    <div class="proj-image-wrap">
+                        <div class="proj-img-frame">
+                            <img src="work1.png" alt="Nearby Driver Service screenshot" class="proj-screenshot">
+                        </div>
+                        <div class="proj-badge">Nearby Driver</div>
+                    </div>
+
+                    <!-- Summary side -->
+                    <div class="proj-summary">
+                        <div class="proj-org-tag">
+                            <i class="fa-solid fa-car"></i> Client Project
+                        </div>
+                        <h2>Nearby Driver Service</h2>
+                        <p>I designed and developed a <strong>fully responsive website</strong> for a local driver service in Hyderabad. The site features a clean layout, smooth navigation, and mobile-friendly design with integrated WhatsApp and call-to-action buttons for easy driver booking.</p>
+                        <ul class="proj-skills">
+                            <li><i class="fa-solid fa-check"></i> Responsive Design</li>
+                            <li><i class="fa-solid fa-check"></i> WhatsApp &amp; CTA Integration</li>
+                            <li><i class="fa-solid fa-check"></i> Pricing &amp; Packages UI</li>
+                            <li><i class="fa-solid fa-check"></i> Booking Form &amp; Contact Page</li>
+                        </ul>
+                        <div class="proj-links">
+                            <a href="https://nearbydriverservice.netlify.app/#home" target="_blank" rel="noopener" class="proj-link-btn proj-link-primary">
+                                <i class="fa-solid fa-up-right-from-square"></i> Live Site
+                            </a>
+                            <a href="https://nearbydriverservice.netlify.app/#packages" target="_blank" rel="noopener" class="proj-link-btn proj-link-secondary">
+                                <i class="fa-solid fa-tag"></i> View Packages
+                            </a>
+                            <a href="https://nearbydriverservice.netlify.app/contact" target="_blank" rel="noopener" class="proj-link-btn proj-link-secondary">
+                                <i class="fa-solid fa-book"></i> Booking UI
+                            </a>
+                        </div>
+                        <span class="proj-year">2025</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom actions -->
+            <div class="port-actions">
+                <a href="https://github.com/AdapaRohith" class="btn" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+                <a href="index.html" class="btn port-btn-outline">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu(){ sidemeu.style.right = "0"; }
+        function closemenu(){ sidemeu.style.right = "-200px"; }
+
+        // Scroll-in animation
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.proj-anim').forEach(function(el) {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

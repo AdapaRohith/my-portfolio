@@ -1,0 +1,422 @@
+/* ======================================================
+   certificates.css — styles for the dedicated certs page
+   ====================================================== */
+
+/* ---- Base overrides for cert page ---- */
+body.cert-page {
+    background: #0A0C10;
+    color: #fff;
+}
+
+/* ---- Navbar ---- */
+.cert-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 12, 16, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 0, 64, 0.18);
+    padding: 14px 0;
+}
+
+.cert-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.cert-nav-logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+.cert-nav-logo:hover { color: #ff0040; }
+
+.cert-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.cert-nav ul li {
+    display: inline-block;
+    margin: 0 18px;
+}
+
+.cert-nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.cert-nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff0040;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+
+.cert-nav ul li a:hover,
+.cert-nav ul li a.active-nav {
+    color: #fff;
+}
+
+.cert-nav ul li a:hover::after,
+.cert-nav ul li a.active-nav::after {
+    width: 100%;
+}
+
+/* ---- Hero ---- */
+.cert-page-hero {
+    position: relative;
+    padding: 60px 0 40px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cert-hero-glow {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, rgba(255, 0, 64, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.cert-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cert-hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 0, 64, 0.12);
+    border: 1px solid rgba(255, 0, 64, 0.3);
+    color: #ff0040;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+}
+
+.cert-hero-content h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 1.15;
+}
+
+.cert-hero-content h1 span {
+    color: #ff0040;
+}
+
+.cert-hero-content > p {
+    font-size: 17px;
+    color: #ababab;
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* Stats row */
+.cert-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.cert-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.cert-stat-num {
+    font-size: 38px;
+    font-weight: 700;
+    color: #ff0040;
+    line-height: 1;
+}
+
+.cert-stat-label {
+    font-size: 13px;
+    color: #888;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* ---- Section ---- */
+.cert-page-section {
+    padding: 40px 0 100px;
+}
+
+/* ---- Animate cert-items in on scroll ---- */
+.cert-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.cert-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- Mobile nav toggle ---- */
+.cert-nav .fa-solid.fa-bars,
+.cert-nav .fa-solid.fa-xmark {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .cert-nav .fa-solid.fa-bars { display: block; }
+
+    .cert-nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        flex-direction: column;
+        padding: 50px 30px;
+        transition: right 0.5s;
+        z-index: 200;
+    }
+
+    .cert-nav ul li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .cert-nav ul .fa-solid.fa-xmark {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .cert-nav ul li a { font-size: 18px; color: #fff; }
+
+    .cert-hero-content h1 { font-size: 36px; }
+    .cert-hero-content > p { font-size: 15px; }
+    .cert-stats { gap: 30px; }
+    .cert-stat-num { font-size: 28px; }
+}
+
+/* ================================================================
+   Real Certificate Card Styles (Google AI Carousel)
+   ================================================================ */
+
+.cert-card-real {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    font-family: 'Georgia', serif;
+    position: relative;
+}
+
+.cert-card-real::before,
+.cert-card-real::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    opacity: 0.5;
+    pointer-events: none;
+}
+.cert-card-real::before { top: 8px; left: 8px; }
+.cert-card-real::after  { bottom: 8px; right: 8px; }
+
+.cert-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 22px 10px;
+    border-bottom: 1px solid #e8e8e8;
+    background: #fafafa;
+}
+
+.cert-card-google-logo {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.cert-card-type {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #888;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    padding: 3px 9px;
+    border-radius: 3px;
+}
+
+.cert-card-pro-badge {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4285F4, #34A853);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.cert-card-body {
+    flex: 1;
+    padding: 18px 22px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.cert-card-recipient {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+    font-family: 'Georgia', serif;
+    line-height: 1.2;
+}
+
+.cert-card-label {
+    font-size: 11px;
+    color: #777;
+    margin: 4px 0 6px;
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+}
+
+.cert-card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 6px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.3;
+}
+
+.cert-card-date {
+    font-size: 11px;
+    color: #999;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.cert-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 22px 14px;
+    border-top: 1px solid #f0f0f0;
+    background: #fafafa;
+}
+
+.cert-verify-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+    color: #4285F4;
+    background: rgba(66,133,244,0.08);
+    border: 1px solid rgba(66,133,244,0.3);
+    padding: 5px 12px;
+    border-radius: 20px;
+    transition: background 0.25s, color 0.25s, transform 0.2s;
+    letter-spacing: 0.3px;
+}
+.cert-verify-btn:hover {
+    background: #4285F4;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.cert-coursera-tag {
+    font-size: 11px;
+    color: #aaa;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cert-card-professional {
+    border: 2px solid rgba(66,133,244,0.25);
+    box-shadow: 0 0 0 4px rgba(66,133,244,0.06), 0 8px 32px rgba(0,0,0,0.35);
+}
+
+.cert-card-professional .cert-card-header {
+    background: linear-gradient(135deg, #f0f4ff 0%, #f0fff4 100%);
+}
+
+.cert-slide .cert-card-real {
+    min-height: 210px;
+}
+
+/* Real certificate images */
+.cert-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+    max-height: 360px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+/* Footer row below certificate image: verify button + coursera tag */
+.cert-img-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    gap: 10px;
+    flex-wrap: wrap;
+}

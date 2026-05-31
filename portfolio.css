@@ -1,0 +1,463 @@
+/* ======================================================
+   portfolio.css — dedicated portfolio page styles
+   Mirrors the certificate page alternating layout
+   ====================================================== */
+
+body.portfolio-page {
+    background: #0A0C10;
+    color: #fff;
+}
+
+/* ──────────────────────────────────────────────
+   STICKY NAVBAR
+   ────────────────────────────────────────────── */
+.port-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 12, 16, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 0, 64, 0.18);
+    padding: 14px 0;
+}
+
+.port-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.port-nav-logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+.port-nav-logo:hover { color: #ff0040; }
+
+.port-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+.port-nav ul li {
+    display: inline-block;
+    margin: 0 18px;
+}
+.port-nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s;
+}
+.port-nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff0040;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.4s;
+}
+.port-nav ul li a:hover,
+.port-nav ul li a.active-nav { color: #fff; }
+.port-nav ul li a:hover::after,
+.port-nav ul li a.active-nav::after { width: 100%; }
+
+/* ──────────────────────────────────────────────
+   HERO SECTION
+   ────────────────────────────────────────────── */
+.port-hero {
+    position: relative;
+    padding: 60px 0 40px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.port-hero-glow {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, rgba(255, 0, 64, 0.14) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.port-hero-content { position: relative; z-index: 1; }
+
+.port-hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 0, 64, 0.12);
+    border: 1px solid rgba(255, 0, 64, 0.3);
+    color: #ff0040;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+}
+
+.port-hero-content h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 1.15;
+}
+.port-hero-content h1 span { color: #ff0040; }
+
+.port-hero-content > p {
+    font-size: 17px;
+    color: #ababab;
+    max-width: 580px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.port-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.port-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.port-stat-num { font-size: 38px; font-weight: 700; color: #ff0040; line-height: 1; }
+.port-stat-label { font-size: 13px; color: #888; letter-spacing: 0.5px; text-transform: uppercase; }
+
+/* ──────────────────────────────────────────────
+   PROJECTS LIST  (mirrors .cert-list)
+   ────────────────────────────────────────────── */
+.port-page-section {
+    padding: 40px 0 100px;
+}
+
+.proj-list {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Each project row */
+.proj-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+}
+
+/* Every EVEN item: image RIGHT, summary LEFT */
+.proj-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* ── Image column ── */
+.proj-image-wrap {
+    flex: 0 0 47%;
+    position: relative;
+}
+
+.proj-img-frame {
+    position: relative;
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #161b22;
+    border: 1px solid rgba(255, 0, 64, 0.25);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+    transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+.proj-item:hover .proj-img-frame {
+    border-color: rgba(255, 0, 64, 0.55);
+    box-shadow: 0 8px 50px rgba(255, 0, 64, 0.18);
+}
+
+.proj-screenshot {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Icon-based placeholder (for projects without a screenshot) */
+.proj-icon-placeholder {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    transition: transform 0.5s ease;
+}
+
+.proj-icon-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #e0e0e0;
+    text-align: center;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.proj-item:hover .proj-icon-placeholder {
+    transform: scale(1.03);
+}
+
+.proj-item:hover .proj-screenshot {
+    transform: scale(1.04);
+}
+
+/* Badge pill below the image */
+.proj-badge {
+    display: inline-block;
+    margin-top: 14px;
+    background: linear-gradient(90deg, #ff0040, #c2006b);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 50px;
+}
+
+/* ── Summary column ── */
+.proj-summary {
+    flex: 1;
+    color: #ababab;
+}
+
+/* Organisation / type tag */
+.proj-org-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 0, 64, 0.1);
+    border: 1px solid rgba(255, 0, 64, 0.3);
+    color: #ff0040;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin-bottom: 18px;
+    letter-spacing: 0.3px;
+}
+
+.proj-summary h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 1.25;
+}
+
+.proj-summary p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: #ababab;
+    margin-bottom: 22px;
+}
+
+.proj-summary strong { color: #ff0040; }
+
+/* Tech / skills list */
+.proj-skills {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+.proj-skills li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+.proj-skills li i {
+    color: #ff0040;
+    font-size: 12px;
+    width: 18px;
+}
+
+/* Link buttons row in summary */
+.proj-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.proj-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    letter-spacing: 0.3px;
+}
+
+.proj-link-primary {
+    background: rgba(255, 0, 64, 0.18);
+    border-color: rgba(255, 0, 64, 0.5);
+    color: #ff5577;
+}
+.proj-link-primary:hover {
+    background: rgba(255, 0, 64, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 18px rgba(255, 0, 64, 0.25);
+}
+
+.proj-link-secondary {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #aaa;
+}
+.proj-link-secondary:hover {
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Year pill */
+.proj-year {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    background: #1e2228;
+    border: 1px solid #333;
+    padding: 4px 14px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+/* ──────────────────────────────────────────────
+   SCROLL-IN ANIMATION
+   ────────────────────────────────────────────── */
+.proj-anim {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.proj-anim.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ──────────────────────────────────────────────
+   BOTTOM ACTION BUTTONS
+   ────────────────────────────────────────────── */
+.port-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 70px;
+    flex-wrap: wrap;
+}
+
+.btn i { margin-right: 8px; }
+
+.port-btn-outline {
+    background: transparent !important;
+    border-color: rgba(255,255,255,0.2) !important;
+    color: #ccc !important;
+}
+.port-btn-outline:hover {
+    background: rgba(255,255,255,0.07) !important;
+    color: #fff !important;
+}
+
+/* ──────────────────────────────────────────────
+   MOBILE NAV TOGGLE
+   ────────────────────────────────────────────── */
+.port-nav .fa-solid.fa-bars,
+.port-nav .fa-solid.fa-xmark {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* ──────────────────────────────────────────────
+   RESPONSIVE
+   ────────────────────────────────────────────── */
+@media screen and (max-width: 768px) {
+    .proj-item,
+    .proj-item:nth-child(even) {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .proj-image-wrap {
+        flex: none;
+        width: 100%;
+    }
+
+    .proj-screenshot { height: 220px; }
+    .proj-summary h2 { font-size: 26px; }
+    .proj-links { flex-direction: column; }
+}
+
+@media screen and (max-width: 600px) {
+    .port-nav .fa-solid.fa-bars { display: block; }
+
+    .port-nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        flex-direction: column;
+        padding: 50px 30px;
+        transition: right 0.5s;
+        z-index: 200;
+    }
+
+    .port-nav ul li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .port-nav ul .fa-solid.fa-xmark {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .port-nav ul li a { font-size: 18px; color: #fff; }
+
+    .port-hero-content h1 { font-size: 36px; }
+    .port-hero-content > p { font-size: 15px; }
+    .port-stats { gap: 28px; }
+    .port-stat-num { font-size: 28px; }
+}
