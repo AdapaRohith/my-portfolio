@@ -563,7 +563,7 @@ nav .fa-solid{
 }
 @media screen and (max-width: 600px){
     #header{
-        background-image: url(main1.png);
+        background-image: none;
     }
     .header-text{
         margin-top: 10%;
@@ -580,7 +580,7 @@ nav .fa-solid{
         background: #ff004f;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -200px;
         width: 200px;
         height: 100vh;
         padding: 50px;

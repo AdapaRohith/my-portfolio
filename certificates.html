@@ -307,6 +307,15 @@
         var sidemeu = document.getElementById("sidemenu");
         function openmenu(){ sidemeu.style.right = "0"; }
         function closemenu(){ sidemeu.style.right = "-200px"; }
+        let lastScrollY = window.scrollY;
+        window.addEventListener("scroll", function(){
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 0) closemenu();
+            lastScrollY = currentScrollY;
+        }, { passive: true });
+        document.addEventListener("pointerdown", function(event){
+            if (sidemeu.style.right === "0px" && !sidemeu.contains(event.target) && !event.target.closest(".fa-bars")) closemenu();
+        });
     </script>
     <script>
         // Scroll-in animation for cert items
